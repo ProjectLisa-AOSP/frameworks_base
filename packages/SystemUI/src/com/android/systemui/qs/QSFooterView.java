@@ -172,6 +172,7 @@ public class QSFooterView extends FrameLayout {
         if (mFooterAnimator != null) {
             mFooterAnimator.setPosition(headerExpansionFraction);
         }
+        setBuildText();
     }
 
     @Override
