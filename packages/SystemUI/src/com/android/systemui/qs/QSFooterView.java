@@ -86,9 +86,22 @@ public class QSFooterView extends FrameLayout {
 
     private void setBuildText() {
         if (mBuildText == null) return;
-        mBuildText.setText(null);
-        mShouldShowBuildText = false;
-        mBuildText.setSelected(false);
+
+	// Array of custom message
+	String[] mCustom = {
+		"We love tillua467!",
+		"We love sanjivns!",
+		"Android > ios",
+		"Build, Flash, Bootloop",
+		"She hasn't messaged, Check later"
+	};
+
+	java.util.Random random = new java.util.Random();
+        String mRand = mCustom[random.nextInt(mCustom.length)];
+
+        mBuildText.setText(mRand);
+        mShouldShowBuildText = true;
+        mBuildText.setSelected(true);
     }
 
     @Override
